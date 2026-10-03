@@ -1,0 +1,316 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* ========================= */
+/* VARIABLES */
+/* ========================= */
+
+:root {
+    /* ---- Colores principales ---- */
+    --color-primary: #314936;
+    --color-primary-dark: #24372A;
+    --color-primary-light: #526B55;
+
+    /* ---- Fondos ---- */
+    --color-background: #F7F3EA;
+    --color-background-soft: #EDE7D8;
+
+    /* ---- Texto ---- */
+    --color-text: #1E241F;
+    --color-text-muted: #687066;
+
+    /* ---- Detalles ---- */
+    --color-accent: #B58A55;
+    --color-accent-light: #D2B98F;
+
+    /* ---- Bordes ---- */
+    --color-border: #D9D2C3;
+
+    /* ---- Navbar ---- */
+    --color-navbar: #f4ecdb;
+    --color-navbar-text: #1E241F;
+
+}
+
+/* =========================
+    NAVBAR
+========================= */
+/* ------------------------- Contenedor ------------------------- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 80px;
+    background-color: var(--color-navbar);
+}
+
+.navbar__container {
+    width: min(1200px, 90%);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ------------------------- Marca ------------------------- */
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.navbar__logo {
+    display: block;
+    width: 28px;
+    height: auto;
+}
+
+.navbar__name {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+/* ------------------------- Navegación ------------------------- */
+.navbar__nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar__link {
+    position: relative;
+    color: var(--color-primary);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* ------------------------- Línea hover ------------------------- */
+.navbar__link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.navbar__link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* ------------------------- CTA ------------------------- */
+.navbar__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 22px;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.navbar__cta:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* ------------------------- Menú mobile ------------------------- */
+.navbar__toggle {
+    display: none;
+}
+
+/* =========================
+    MEDIA QUERIES
+========================= */
+/* ------------------------- Tablet ------------------------- */
+
+@media (max-width: 900px) {
+
+    .navbar__container {
+        width: min(1200px, 92%);
+    }
+
+    .navbar__nav {
+        gap: 24px;
+    }
+
+    .navbar__link {
+        font-size: 14px;
+    }
+
+    .navbar__cta {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+/* ------------------------- Mobile ------------------------- */
+@media (max-width: 700px) {
+
+    .navbar {
+        height: 70px;
+    }
+
+    .navbar__container {
+        width: 90%;
+    }
+
+    .navbar__logo {
+        width: 30px;
+    }
+
+    .navbar__name {
+        font-size: 19px;
+    }
+
+/* ------------------------- Navegación mobile ------------------------- */
+    .navbar__nav {
+        position: fixed;
+        top: 69px;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        height: calc(100vh - 70px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        background-color: var(--color-navbar);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+            opacity 0.2s ease,
+            visibility 0.2s ease;
+    }
+
+    .navbar__link {
+        font-size: 22px;
+    }
+
+/* ------------------------- CTA mobile ------------------------- */
+    .navbar__cta {
+        position: fixed;
+        left: 50%;
+        bottom: 50px;
+        z-index: 1000;
+        display: inline-flex;
+        padding: 12px 24px;
+        font-size: 15px;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease,
+            background-color 0.3s ease;
+    }
+
+/* ------------------------- Menú abierto ------------------------- */
+    .navbar--open .navbar__nav,
+    .navbar--open .navbar__cta {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+/* ------------------------- Botón ------------------------- */
+    .navbar__toggle {
+        position: relative;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        padding: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .navbar__toggle span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-primary);
+        border-radius: 2px;
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease;
+    }
+
+/* ------------------------- Botón abierto ------------------------- */
+    .navbar--open .navbar__toggle span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .navbar--open .navbar__toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar--open .navbar__toggle span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+}
