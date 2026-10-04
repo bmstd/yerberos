@@ -95,11 +95,11 @@ const productos = [
     },
 
     {
-        id: "yerbera",
-        nombre: "Yerbera",
+        id: "yerbero",
+        nombre: "Yerberos",
         categoria: "complementos",
-        descripcion: "Práctica y compacta para llevar tu yerba a donde quieras.",
-        imagen: "../assets/images/catalogo/yerbera.png"
+        descripcion: "Prácticos y compactos para llevar tu yerba a donde quieras.",
+        imagen: "../assets/images/catalogo/yerbero.png"
     },
 
 

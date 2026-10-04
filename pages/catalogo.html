@@ -20,211 +20,233 @@
 </head>
 <body>
     <!-- =========================
-    NAVBAR
-========================= -->
-
-<header class="navbar">
-    <div class="navbar__container">
-        <a
-            href="../index.html#inicio"
-            class="navbar__brand"
-            aria-label="YERBEROS - Inicio"
-        >
-            <img
-                src="../assets/images/brand/logo.webp"
-                alt=""
-                class="navbar__logo"
-            >
-            <span class="navbar__name">
-                YERBEROS
-            </span>
-        </a>
-        <nav
-            class="navbar__nav"
-            id="navbar-nav"
-            aria-label="Navegación principal"
-        >
+        NAVBAR
+    ========================= -->
+    <header class="navbar">
+        <div class="navbar__container">
             <a
                 href="../index.html#inicio"
-                class="navbar__link"
+                class="navbar__brand"
+                aria-label="YERBEROS - Inicio"
             >
-                Inicio
+                <img
+                    src="../assets/images/brand/logo.webp"
+                    alt=""
+                    class="navbar__logo"
+                >
+                <span class="navbar__name">
+                    YERBEROS
+                </span>
             </a>
+            <nav
+                class="navbar__nav"
+                id="navbar-nav"
+                aria-label="Navegación principal"
+            >
+                <a
+                    href="../index.html#inicio"
+                    class="navbar__link"
+                >
+                    Inicio
+                </a>
+                <a
+                    href="../index.html#destacados"
+                    class="navbar__link"
+                >
+                    Destacados
+                </a>
+                <a
+                    href="../index.html#nosotros"
+                    class="navbar__link"
+                >
+                    Nosotros
+                </a>
+                <a
+                    href="../index.html#contacto"
+                    class="navbar__link"
+                >
+                    Contacto
+                </a>
+            </nav>
             <a
-                href="../index.html#destacados"
-                class="navbar__link"
+                href="./catalogo.html"
+                class="navbar__cta"
+                aria-current="page"
             >
-                Destacados
+                Catálogo
             </a>
-            <a
-                href="../index.html#nosotros"
-                class="navbar__link"
+            <button
+                class="navbar__toggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="navbar-nav"
             >
-                Nosotros
-            </a>
-            <a
-                href="../index.html#contacto"
-                class="navbar__link"
-            >
-                Contacto
-            </a>
-        </nav>
-        <a
-            href="./catalogo.html"
-            class="navbar__cta"
-            aria-current="page"
-        >
-            Catálogo
-        </a>
-        <button
-            class="navbar__toggle"
-            type="button"
-            aria-label="Abrir menú"
-            aria-expanded="false"
-            aria-controls="navbar-nav"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</header>
-
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
     <!-- =========================
-    Contenido principal
-========================= -->
-<main>
-
+        Contenido principal
+    ========================= -->
+    <main>
     <!-- =========================
         Encabezado
     ========================= -->
-
-    <section class="catalog-header">
-
-        <div class="catalog-header__container">
-
-            <span class="catalog-header__eyebrow">
-                Catálogo
-            </span>
-
-            <h1 class="catalog-header__title">
-                Encontrá todo para disfrutar del buen mate.
-            </h1>
-
-            <p class="catalog-header__text">
-                Explorá nuestra selección de mates, yerbas y complementos
-                pensados para acompañar tus mejores momentos.
-            </p>
-
-        </div>
-
-    </section>
-
-
+        <section class="catalog-header">
+            <div class="catalog-header__container">
+                <span class="catalog-header__eyebrow">
+                    Catálogo
+                </span>
+                <h1 class="catalog-header__title">
+                    Encontrá todo para disfrutar del buen mate.
+                </h1>
+                <p class="catalog-header__text">
+                    Explorá nuestra selección de mates, yerbas y complementos
+                    pensados para acompañar tus mejores momentos.
+                </p>
+            </div>
+        </section>
     <!-- =========================
         Catálogo
     ========================= -->
-
-    <section class="catalog">
-
-        <div class="catalog__container">
-
-            <!-- Categorías -->
-
-            <nav
-                class="catalog__filters"
-                aria-label="Filtrar productos por categoría"
-            >
-
-                <button
-                    type="button"
-                    class="catalog__filter catalog__filter--active"
-                    data-category="todos"
+        <section class="catalog">
+            <div class="catalog__container">
+                <!-- Categorías -->
+                <nav
+                    class="catalog__filters"
+                    aria-label="Filtrar productos por categoría"
                 >
-                    Todos
-                </button>
-
-                <button
-                    type="button"
-                    class="catalog__filter"
-                    data-category="mates"
+                    <button
+                        type="button"
+                        class="catalog__filter catalog__filter--active"
+                        data-category="todos"
+                    >
+                        Todos
+                    </button>
+                    <button
+                        type="button"
+                        class="catalog__filter"
+                        data-category="mates"
+                    >
+                        Mates
+                    </button>
+                    <button
+                        type="button"
+                        class="catalog__filter"
+                        data-category="yerbas"
+                    >
+                        Yerbas
+                    </button>
+                    <button
+                        type="button"
+                        class="catalog__filter"
+                        data-category="complementos"
+                    >
+                        Complementos
+                    </button>
+                </nav>
+                <!-- Productos -->
+                <div
+                    class="catalog__grid"
+                    id="catalog-products"
                 >
-                    Mates
-                </button>
-
-                <button
-                    type="button"
-                    class="catalog__filter"
-                    data-category="yerbas"
-                >
-                    Yerbas
-                </button>
-
-                <button
-                    type="button"
-                    class="catalog__filter"
-                    data-category="complementos"
-                >
-                    Complementos
-                </button>
-
-            </nav>
-
-
-            <!-- Productos -->
-
-            <div
-                class="catalog__grid"
-                id="catalog-products"
-            >
-                <!--
-                    Los productos serán
-                    generados mediante JavaScript.
-                -->
+                    <!--
+                        Los productos serán
+                        generados mediante JavaScript.
+                    -->
+                </div>
             </div>
-
-        </div>
-
-    </section>
-
-
+        </section>
     <!-- =========================
         CTA
     ========================= -->
-
-    <section class="catalog-cta">
-
-        <div class="catalog-cta__container">
-
-            <span class="catalog-cta__eyebrow">
-                ¿Buscás algo en particular?
-            </span>
-
-            <h2 class="catalog-cta__title">
-                Hablemos.
-            </h2>
-
-            <p class="catalog-cta__text">
-                Si no encontrás lo que buscás o querés consultar
-                por algún producto, escribinos.
-            </p>
-
+        <section class="catalog-cta">
+            <div class="catalog-cta__container">
+                <span class="catalog-cta__eyebrow">
+                    ¿Buscás algo en particular?
+                </span>
+                <h2 class="catalog-cta__title">
+                    Hablemos.
+                </h2>
+                <p class="catalog-cta__text">
+                    Si no encontrás lo que buscás o querés consultar
+                    por algún producto, escribinos.
+                </p>
+                <a
+                    href="https://wa.me/5493816481327?text=Hola%20Yerberos!%20Vengo%20desde%20su%20web%20y%20quer%C3%ADa%20hacerles%20una%20consulta."
+                    class="catalog-cta__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Escribinos por WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- =========================
+        FOOTER
+    ========================= -->
+    <footer class="footer">
+        <div class="footer__container">
+            <!-- Marca -->
             <a
-                href="https://wa.me/5493816481327?text=Hola%20Yerberos!%20Vengo%20desde%20su%20web%20y%20quer%C3%ADa%20hacerles%20una%20consulta."
-                class="catalog-cta__link"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="../index.html#inicio"
+                class="footer__brand"
+                aria-label="YERBEROS - Inicio"
             >
-                Escribinos por WhatsApp
+                <img
+                    src="../assets/images/brand/logo.webp"
+                    alt=""
+                    class="footer__logo"
+                >
+                <span class="footer__name">
+                    Yerberos
+                </span>
             </a>
-
+            <!-- Navegación -->
+            <nav
+                class="footer__nav"
+                aria-label="Navegación del pie de página"
+            >
+                <a
+                    href="../index.html#inicio"
+                    class="footer__link"
+                >
+                    Inicio
+                </a>
+                <a
+                    href="../index.html#destacados"
+                    class="footer__link"
+                >
+                    Destacados
+                </a>
+                <a
+                    href="../index.html#nosotros"
+                    class="footer__link"
+                >
+                    Nosotros
+                </a>
+                <a
+                    href="../index.html#contacto"
+                    class="footer__link"
+                >
+                    Contacto
+                </a>
+            </nav>
+            <!-- Copyright -->
+            <span class="footer__copyright">
+                © 2026 Yerberos
+            </span>
         </div>
-
-    </section>
-
-</main>
-<script src="../js/main.js"></script>
-<script src="../js/productos.js"></script>
-<script src="../js/catalogo.js"></script>
+    </footer>
+    <!-- =========================
+        Scripts
+    ========================= -->
+    <script src="../js/main.js"></script>
+    <script src="../js/productos.js"></script>
+    <script src="../js/catalogo.js"></script>
 </body>
 </html>
