@@ -1200,105 +1200,74 @@ DESTACADOS
 /* =========================
     CONTACTO
 ========================= */
-
 /* ------------------------- Contenedor ------------------------- */
-
 .contact {
     padding: 120px 0;
-
     background-color: var(--color-background);
 }
 
 .contact__container {
     width: min(1000px, 90%);
-
     margin: 0 auto;
 }
 
-
 /* ------------------------- Encabezado ------------------------- */
-
 .contact__header {
     max-width: 650px;
-
     margin: 0 auto 60px;
-
     text-align: center;
 }
 
 .contact__eyebrow {
     display: block;
-
     margin-bottom: 14px;
-
     color: var(--color-accent);
-
     font-size: 13px;
     font-weight: 600;
-
     letter-spacing: 0.16em;
     text-transform: uppercase;
 }
 
 .contact__title {
     margin: 0;
-
     color: var(--color-primary);
-
     font-size: clamp(40px, 4.5vw, 58px);
     font-weight: 600;
-
     line-height: 1.08;
     letter-spacing: -0.035em;
 }
 
 .contact__text {
     max-width: 520px;
-
     margin: 20px auto 0;
-
     color: var(--color-text-muted);
-
     font-size: 17px;
     line-height: 1.6;
 }
 
-
 /* ------------------------- Opciones ------------------------- */
-
 .contact__options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     gap: 24px;
 }
 
-
 /* ------------------------- Tarjetas ------------------------- */
-
 .contact__option {
     position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     min-height: 300px;
-
     padding: 45px 30px;
-
     background-color: var(--color-background-soft);
     color: var(--color-text);
-
     border: 1px solid var(--color-border);
     border-radius: 14px;
-
     text-align: center;
     text-decoration: none;
-
     overflow: hidden;
-
     transition:
         transform 0.35s ease,
         border-color 0.35s ease,
@@ -1307,26 +1276,18 @@ DESTACADOS
 
 .contact__option:hover {
     transform: translateY(-6px);
-
     border-color: var(--color-accent);
-
     box-shadow:
         0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
-
 /* ------------------------- Iconos ------------------------- */
-
 .contact__icon {
     display: block;
-
     width: 52px;
     height: 52px;
-
     margin-bottom: 24px;
-
     object-fit: contain;
-
     transition:
         transform 0.35s ease;
 }
@@ -1340,31 +1301,21 @@ DESTACADOS
     height: 54px;
 }
 
-
 /* ------------------------- Título ------------------------- */
-
 .contact__option-title {
     margin: 0;
-
     color: var(--color-primary);
-
     font-size: 23px;
     font-weight: 600;
-
     line-height: 1.2;
 }
 
-
 /* ------------------------- Acción ------------------------- */
-
 .contact__option-action {
     margin-top: 10px;
-
     color: var(--color-text-muted);
-
     font-size: 15px;
     font-weight: 500;
-
     transition:
         color 0.3s ease;
 }
@@ -1373,15 +1324,11 @@ DESTACADOS
     color: var(--color-primary);
 }
 
-
 /* =========================
     MEDIA QUERIES
 ========================= */
-
 /* ------------------------- Tablet ------------------------- */
-
 @media (max-width: 900px) {
-
     .contact {
         padding: 100px 0;
     }
@@ -1400,15 +1347,12 @@ DESTACADOS
 
     .contact__option {
         min-height: 270px;
-
         padding: 35px 25px;
     }
 
 }
 
-
 /* ------------------------- Mobile ------------------------- */
-
 @media (max-width: 700px) {
 
     .contact {
@@ -1419,16 +1363,13 @@ DESTACADOS
         width: 90%;
     }
 
-
-    /* ------------------------- Encabezado ------------------------- */
-
+/* ------------------------- Encabezado ------------------------- */
     .contact__header {
         margin-bottom: 40px;
     }
 
     .contact__eyebrow {
         margin-bottom: 12px;
-
         font-size: 12px;
     }
 
@@ -1438,37 +1379,27 @@ DESTACADOS
 
     .contact__text {
         margin-top: 18px;
-
         font-size: 16px;
     }
 
-
-    /* ------------------------- Opciones ------------------------- */
+/* ------------------------- Opciones ------------------------- */
 
     .contact__options {
         grid-template-columns: 1fr;
-
         gap: 16px;
     }
 
-
-    /* ------------------------- Tarjetas ------------------------- */
-
+/* ------------------------- Tarjetas ------------------------- */
     .contact__option {
         min-height: 240px;
-
         padding: 35px 25px;
-
         border-radius: 12px;
     }
 
-
-    /* ------------------------- Iconos ------------------------- */
-
+/* ------------------------- Iconos ------------------------- */
     .contact__icon {
         width: 48px;
         height: 48px;
-
         margin-bottom: 20px;
     }
 
@@ -1477,15 +1408,149 @@ DESTACADOS
         height: 50px;
     }
 
-
-    /* ------------------------- Título ------------------------- */
-
+/* ------------------------- Título ------------------------- */
     .contact__option-title {
         font-size: 21px;
     }
 
     .contact__option-action {
         font-size: 14px;
+    }
+
+}
+
+/* =========================
+    FOOTER
+========================= */
+/* ------------------------- Contenedor ------------------------- */
+.footer {
+    padding: 35px 0;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+.footer__container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+/* ------------------------- Marca ------------------------- */
+.footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer__logo {
+    display: block;
+    width: 28px;
+    height: auto;
+}
+
+.footer__name {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+/* ------------------------- Navegación ------------------------- */
+.footer__nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer__link {
+    position: relative;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer__link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 100%;
+    height: 1px;
+    background-color: #FFFFFF;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.footer__link:hover {
+    color: #FFFFFF;
+}
+
+.footer__link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* ------------------------- Copyright ------------------------- */
+.footer__copyright {
+    justify-self: end;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* =========================
+    MEDIA QUERIES
+========================= */
+/* ------------------------- Mobile ------------------------- */
+
+@media (max-width: 700px) {
+
+    .footer {
+        padding: 45px 0;
+    }
+
+    .footer__container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+
+    /* ------------------------- Marca ------------------------- */
+    .footer__brand {
+        gap: 9px;
+    }
+
+    .footer__logo {
+        width: 30px;
+    }
+
+    .footer__name {
+        font-size: 19px;
+    }
+
+/* ------------------------- Navegación ------------------------- */
+    .footer__nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 22px;
+    }
+
+    .footer__link {
+        font-size: 14px;
+    }
+
+/* ------------------------- Copyright ------------------------- */
+    .footer__copyright {
+        justify-self: auto;
+        font-size: 12px;
     }
 
 }
